@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Primera Página</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header class="encabezado">
+        <nav class="navegacion" aria-label="Navegación principal">
+
+            <h2 class="titulo-encabezado">
+                Mi Primera Página Web
+            </h2>
+
+            <!-- Botón circular de GitHub -->
+            <a
+                href="https://github.com/TU-USUARIO"
+                class="boton-github"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visitar mi perfil de GitHub"
+                title="Mi GitHub"
+            >
+                <svg
+                    viewBox="0 0 24 24"
+                    width="27"
+                    height="27"
+                    fill="currentColor"
+                    aria-hidden="true"
+                >
+                    <path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.08c-3.1.68-3.75-1.32-3.75-1.32-.5-1.29-1.23-1.63-1.23-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.93.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.56 0c2.12-1.44 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.29-2.61 5.23-5.1 5.51.4.35.75 1.03.75 2.08v3.1c0 .3.2.65.76.54A11.1 11.1 0 0 0 12 .9Z"/>
+                </svg>
+            </a>
+
+        </nav>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="inicio">
+
+        <!-- PRESENTACIÓN PERSONAL -->
+        <section class="presentacion" aria-labelledby="titulo-principal">
+
+            <!-- ESPACIO PARA LA FOTOGRAFÍA -->
+            <div class="contenedor-foto">
+
+                <img
+                    src="img/mi-foto.jpg"
+                    alt="Fotografía de Juan Esteban Esguerra Largo"
+                    class="foto-perfil"
+                >
+
+                <span class="etiqueta-foto">
+                    ESTUDIANTE DE ELECTRÓNICA
+                </span>
+
+            </div>
+
+
+            <!-- INFORMACIÓN PRINCIPAL -->
+            <div class="contenido-presentacion">
+
+                <p class="sobrelinea">
+                    ¡HOLA! BIENVENIDO A MI ESPACIO PERSONAL
+                </p>
+
+                <h1 id="titulo-principal">
+                    Juan Esteban
+                    <span>Esguerra Largo</span>
+                </h1>
+
+                <p class="descripcion-principal">
+                    Soy estudiante de Electrónica Industrial  y estoy descubriendo
+                    el mundo del desarrollo web, aprendiendo nuevas
+                    herramientas y desarrollando mis habilidades.
+                </p>
+
+                
+                    
+
+
+                <!-- BOTONES DE INFORMACIÓN -->
+                <div class="botones-informacion">
+
+                    <button
+                        type="button"
+                        class="boton boton-primario"
+                        id="boton-personal"
+                        aria-expanded="false"
+                        aria-controls="informacion-personal"
+                    >
+                        Sobre mí
+                        <span aria-hidden="true">＋</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="boton boton-secundario"
+                        id="boton-materia"
+                        aria-expanded="false"
+                        aria-controls="informacion-materia"
+                    >
+                        Mi materia
+                        <span aria-hidden="true">＋</span>
+                    </button>
+
+                </div>
+
+
+                <!-- BURBUJA SOBRE INFORMACIÓN PERSONAL -->
+                <section
+                    class="burbuja-comic"
+                    id="informacion-personal"
+                    aria-labelledby="titulo-personal"
+                    hidden
+                >
+
+                    <h2 id="titulo-personal">
+                        ¡Un poco sobre mí!
+                    </h2>
+
+                    <p>
+                        Mi nombre es Juan Esteban Esguerra Largo,
+                        tengo 20 años y soy de Cali, Colombia.
+                        Actualmente estudio Electrónica Industrial
+                        en la Universidad Antonio José Camacho,
+                        donde curso séptimo semestre.
+                    </p>
+
+                    <span class="firma-burbuja">
+                        — Sobre mí
+                    </span>
+
+                </section>
+
+
+                <!-- BURBUJA SOBRE LA MATERIA -->
+                <section
+                    class="burbuja-comic"
+                    id="informacion-materia"
+                    aria-labelledby="titulo-materia"
+                    hidden
+                >
+
+                    <h2 id="titulo-materia">
+                        ¡Mi experiencia aprendiendo!
+                    </h2>
+
+                    <p>
+                        En esta materia estoy aprendiendo a desarrollar
+                        páginas web utilizando HTML, CSS.
+                        Es mi primera interacción con estas tecnologías
+                        y, aunque al principio se me ha dificultado
+                        comprender algunos conceptos, he logrado avanzar
+                        bastante y aprender cosas nuevas.
+                    </p>
+
+                    <p>
+                        También he utilizado inteligencia artificial
+                        como herramienta de apoyo para resolver dudas,
+                        entender el código y guiarme durante el proceso.
+                        
+                    </p>
+
+                    <span class="firma-burbuja">
+                        — Mi materia
+                    </span>
+
+                </section>
+
+
+                <!-- BOTÓN PARA SALUDAR AL MUNDO -->
+                <div class="saludo">
+
+                    
+                    </p>
+
+                    <button
+                        type="button"
+                        class="boton boton-saludo"
+                        id="boton-saludo"
+                    >
+                        <span aria-hidden="true">✦</span>
+                        Click para saludar al mundo
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+
+        <p>
+            Diseñado por Juan Esteban Esguerra Largo
+            <span aria-hidden="true">·</span>
+            Mi primera página web
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT: INTERACCIÓN DE LOS BOTONES -->
+    <script>
+
+        // Seleccionar los botones
+        const botonPersonal =
+            document.getElementById("boton-personal");
+
+        const botonMateria =
+            document.getElementById("boton-materia");
+
+        const botonSaludo =
+            document.getElementById("boton-saludo");
+
+
+        // Seleccionar las burbujas
+        const informacionPersonal =
+            document.getElementById("informacion-personal");
+
+        const informacionMateria =
+            document.getElementById("informacion-materia");
+
+
+        // Abrir una burbuja y cerrar la otra
+        function alternarBurbuja(
+            botonSeleccionado,
+            burbujaSeleccionada
+        ) {
+
+            const yaEstaAbierta =
+                botonSeleccionado.getAttribute("aria-expanded") === "true";
+
+
+            // Cerrar ambas burbujas
+            informacionPersonal.hidden = true;
+            informacionMateria.hidden = true;
+
+            botonPersonal.setAttribute("aria-expanded", "false");
+            botonMateria.setAttribute("aria-expanded", "false");
+
+            botonPersonal.querySelector("span").textContent = "＋";
+            botonMateria.querySelector("span").textContent = "＋";
+
+
+            // Abrir la burbuja seleccionada si estaba cerrada
+            if (!yaEstaAbierta) {
+
+                burbujaSeleccionada.hidden = false;
+
+                botonSeleccionado.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+                botonSeleccionado.querySelector("span").textContent = "－";
+
+            }
+
+        }
+
+
+        // Botón Sobre mí
+        botonPersonal.addEventListener("click", function () {
+
+            alternarBurbuja(
+                botonPersonal,
+                informacionPersonal
+            );
+
+        });
+
+
+        // Botón Mi materia
+        botonMateria.addEventListener("click", function () {
+
+            alternarBurbuja(
+                botonMateria,
+                informacionMateria
+            );
+
+        });
+
+
+        // Botón Hola Mundo
+        botonSaludo.addEventListener("click", function () {
+
+            console.log("Hola Mundo desde JavaScript");
+
+        });
+
+    </script>
+
+</body>
+
+</html>

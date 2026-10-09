@@ -1,0 +1,484 @@
+
+/* =========================================
+   1. VARIABLES DE COLOR Y CONFIGURACIÓN
+   ========================================= */
+
+:root {
+    --azul: #0F62FE;
+    --gris-secundario: #6F6F6F;
+    --verde: #198038;
+    --gris-neutral: #525252;
+
+    --fondo: #101827;
+    --fondo-tarjeta: #192536;
+    --fondo-claro: #223146;
+    --texto: #F4F6FA;
+    --texto-secundario: #B8C2D1;
+    --borde: rgba(255, 255, 255, 0.10);
+}
+
+/* Elimina márgenes y facilita calcular tamaños */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--fondo);
+    background-image:
+        radial-gradient(
+            ellipse at 15% 20%,
+            rgba(15, 98, 254, 0.16),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 85% 75%,
+            rgba(25, 128, 56, 0.12),
+            transparent 35%
+        );
+
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   2. ENCABEZADO Y NAVEGACIÓN
+   ========================================= */
+
+.encabezado {
+    width: 100%;
+    background-color: rgba(10, 16, 27, 0.92);
+    border-bottom: 1px solid var(--borde);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(12px);
+}
+
+.navegacion {
+    width: min(1120px, 90%);
+    min-height: 76px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.logo span {
+    color: var(--azul);
+}
+
+.enlace-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 16px;
+    border: 1px solid rgba(15, 98, 254, 0.6);
+    border-radius: 8px;
+
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: background-color 0.25s, transform 0.25s;
+}
+
+.enlace-github span {
+    color: #70A0FF;
+    font-size: 19px;
+}
+
+.enlace-github:hover {
+    background-color: var(--azul);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   3. SECCIÓN PRINCIPAL
+   ========================================= */
+
+.presentacion {
+    width: min(1120px, 90%);
+    min-height: 650px;
+    margin: 55px auto;
+
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 65px;
+}
+
+/* =========================================
+   4. FOTOGRAFÍA
+   ========================================= */
+
+.contenedor-foto {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.foto-perfil {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+
+    border-radius: 22px;
+    border: 1px solid rgba(112, 160, 255, 0.35);
+
+    background-color: var(--fondo-tarjeta);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.28);
+}
+
+.etiqueta-foto {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: max-content;
+    max-width: 90%;
+    padding: 8px 14px;
+
+    background-color: rgba(16, 24, 39, 0.92);
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+
+    color: #A8C6FF;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+/* =========================================
+   5. TEXTOS DE PRESENTACIÓN
+   ========================================= */
+
+.contenido-presentacion {
+    width: 100%;
+}
+
+.sobrelinea {
+    margin-bottom: 14px;
+    color: #78A5FF;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin-bottom: 22px;
+    font-size: clamp(35px, 4.5vw, 55px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -1.8px;
+}
+
+h1 span {
+    display: block;
+    color: var(--azul);
+}
+
+.descripcion-principal {
+    margin-bottom: 16px;
+    color: var(--texto);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.texto-secundario {
+    margin-bottom: 26px;
+    color: var(--texto-secundario);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   6. BOTONES DE INFORMACIÓN
+   ========================================= */
+
+.botones-informacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.boton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    min-height: 46px;
+    padding: 11px 18px;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s,
+        border-color 0.25s,
+        transform 0.25s;
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+}
+
+.boton:focus-visible,
+.enlace-github:focus-visible {
+    outline: 3px solid #A8C6FF;
+    outline-offset: 4px;
+}
+
+.boton-primario {
+    background-color: var(--azul);
+    color: white;
+}
+
+.boton-primario:hover {
+    background-color: #0049CC;
+}
+
+.boton-secundario {
+    background-color: transparent;
+    border-color: var(--gris-secundario);
+    color: var(--texto);
+}
+
+.boton-secundario:hover {
+    background-color: var(--fondo-claro);
+    border-color: #A8B2C0;
+}
+
+.boton[aria-expanded="true"] {
+    border-color: var(--verde);
+}
+
+/* =========================================
+   7. PANELES DESPLEGABLES
+   ========================================= */
+
+.panel-informacion {
+    margin: 18px 0;
+    padding: 22px;
+
+    background-color: var(--fondo-tarjeta);
+    border: 1px solid var(--borde);
+    border-left: 3px solid var(--verde);
+    border-radius: 10px;
+
+    animation: aparecer 0.25s ease-out;
+}
+
+.panel-informacion[hidden] {
+    display: none;
+}
+
+.panel-informacion h2 {
+    margin-bottom: 12px;
+    color: #7FE09B;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.panel-informacion p {
+    margin-bottom: 12px;
+    color: var(--texto-secundario);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.panel-informacion p:last-child {
+    margin-bottom: 0;
+}
+
+.lista-personal {
+    list-style: none;
+}
+
+.lista-personal li {
+    padding: 7px 0;
+    border-bottom: 1px solid var(--borde);
+    color: var(--texto-secundario);
+    font-size: 14px;
+}
+
+.lista-personal li:last-child {
+    border-bottom: none;
+}
+
+.lista-personal strong {
+    color: var(--texto);
+}
+
+/* =========================================
+   8. BOTÓN HOLA MUNDO
+   ========================================= */
+
+.saludo {
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid var(--borde);
+}
+
+.texto-saludo {
+    margin-bottom: 13px;
+    color: var(--texto-secundario);
+    font-size: 13px;
+}
+
+.boton-saludo {
+    width: 100%;
+    min-height: 50px;
+
+    background-color: var(--verde);
+    color: white;
+}
+
+.boton-saludo span {
+    font-size: 19px;
+}
+
+.boton-saludo:hover {
+    background-color: #146C2E;
+}
+
+/* =========================================
+   9. PIE DE PÁGINA
+   ========================================= */
+
+.pie-pagina {
+    padding: 24px 5%;
+    border-top: 1px solid var(--borde);
+    background-color: rgba(10, 16, 27, 0.65);
+
+    text-align: center;
+}
+
+.pie-pagina p {
+    color: var(--texto-secundario);
+    font-size: 12px;
+}
+
+.pie-pagina span {
+    padding: 0 5px;
+    color: var(--verde);
+}
+
+/* =========================================
+   10. ANIMACIÓN
+   ========================================= */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   11. DISEÑO PARA TABLET Y CELULAR
+   ========================================= */
+
+@media (max-width: 800px) {
+    .presentacion {
+        grid-template-columns: 1fr;
+        gap: 38px;
+        margin: 35px auto;
+    }
+
+    .contenedor-foto {
+        max-width: 320px;
+    }
+
+    .contenido-presentacion {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: clamp(34px, 7vw, 48px);
+    }
+}
+
+@media (max-width: 480px) {
+    .navegacion {
+        width: 92%;
+        min-height: 66px;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 11px;
+        letter-spacing: 0.8px;
+    }
+
+    .enlace-github {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    .presentacion {
+        width: 90%;
+        margin: 28px auto;
+    }
+
+    .botones-informacion {
+        flex-direction: column;
+    }
+
+    .botones-informacion .boton {
+        width: 100%;
+    }
+
+    .panel-informacion {
+        padding: 16px;
+    }
+}
+
+/* Respeta la preferencia de movimiento reducido */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
